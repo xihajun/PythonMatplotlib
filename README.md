@@ -49,6 +49,9 @@ ax2.hist(x,y)
 plt.setp(ax2, xlim =ax.get_xlim(), ylim=ax.get_ylim())
 
 ```
+
+## circos 和弦图
+参考：https://zhuanlan.zhihu.com/p/56744904
 ## 打断坐标
 需要安装一个包\
 参考：https://blog.csdn.net/maryyu8873/article/details/84313423
