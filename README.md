@@ -13,3 +13,19 @@ fig, (ax,ax2) = plt.subplots(2, 1,gridspec_kw={'height_ratios': [20, 1]})
 # two cols of subplots (1:1)
 fig, (ax,ax2) = plt.subplots(1, 2,gridspec_kw={'width_ratios': [1, 1]})
 ```
+
+
+## output
+写paper的话需要输出svg文件，如何进行输出呢？
+```
+# example
+# 防止名字重复
+if self.outdir != False:
+    savefilename = self.outdir+gene_name+'_'+str(self.win)
+    while(os.path.isfile(savefilename+".svg")):
+        savefilename = savefilename +'-'
+    print("Save to"+ savefilename+".svg")
+    
+    # bbox_inches='tight'防止输出不全
+    fig.savefig(savefilename+".svg", format="svg", bbox_inches='tight')
+```
