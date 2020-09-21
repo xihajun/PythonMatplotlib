@@ -4,7 +4,7 @@ How to use python to draw
 The most important and widely used feature should be subplot. \
 需要掌握的有 
 - (How) 如何用python画子图 
-- (Size)控制子图大小比例 
+- (Size) 控制子图大小比例 
 ```
 # size of the whole pic
 plt.rcParams["figure.figsize"] = (13, 13)
@@ -13,7 +13,42 @@ fig, (ax,ax2) = plt.subplots(2, 1,gridspec_kw={'height_ratios': [20, 1]})
 # two cols of subplots (1:1)
 fig, (ax,ax2) = plt.subplots(1, 2,gridspec_kw={'width_ratios': [1, 1]})
 ```
+## zoom
 
+```
+fig, (ax,ax2) = plt.subplots(2, 1,gridspec_kw={'height_ratios': [20, 1]})
+
+# 可以储存label，legend可以用到
+dots1 = []
+for i in yourlist:
+    if i != -1:
+        dots1.append(ax.scatter(x, y, label=i))
+
+# (x,y)起始点，(w,h)长宽比例：分别为 (1.1, -0.1) 、 (0.3, 1)
+ax1 = ax.inset_axes([1.1, -0.1,0.3, 1])
+
+dots1 = []
+for i in yourlist:
+    if i != -1:
+        dots1.append(ax1.scatter(x, y, label=i))
+
+# 选择x,y范围
+ax1.set_xlim(start-2000, start+2000)
+ax1.set_ylim(0,max_v)
+# 不显示 x, y 轴
+ax1.get_xaxis().set_visible(False)
+ax1.get_yaxis().set_visible(False)
+# 图片标题
+ax1.set_title('zoom in - windows 2000')
+ax1.legend(dots1[1:2],['第1个label','第2个label'])
+ax.indicate_inset_zoom(ax1)
+ax.set_ylabel('filename',fontsize =20)
+
+ax2.hist(x,y)
+# 让ax2和ax拥有一样的横坐标范围，方便对比
+plt.setp(ax2, xlim =ax.get_xlim(), ylim=ax.get_ylim())
+
+```
 
 ## output
 写paper的话需要输出svg文件，如何进行输出呢？
