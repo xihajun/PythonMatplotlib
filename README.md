@@ -3,8 +3,8 @@ How to use python to draw
 ## subplot
 The most important and widely used feature should be subplot. \
 需要掌握的有 
-- 如何用python画子图 (How)
-- 如何控制子图大小比例 (Size)
+- (How) 如何用python画子图 
+- (Size)控制子图大小比例 
 ```
 # size of the whole pic
 plt.rcParams["figure.figsize"] = (13, 13)
