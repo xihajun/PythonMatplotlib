@@ -1,5 +1,5 @@
-# PythonMatplotlib
-How to use python to draw
+# Python Visualisation
+How to use python to draw: `matplotlib`, `sns`, `plotly`
 ## subplot
 The most important and widely used feature should be subplot. \
 需要掌握的有 
@@ -56,6 +56,20 @@ plt.setp(ax2, xlim =ax.get_xlim(), ylim=ax.get_ylim())
 需要安装一个包\
 参考：https://blog.csdn.net/maryyu8873/article/details/84313423
 
+## sns 
+- linear plot: https://seaborn.pydata.org/generated/seaborn.regplot.html
+    - `lmplot` or `regplot`
+- violin plot
+    - sns: https://seaborn.pydata.org/generated/seaborn.violinplot.html
+    - https://mode.com/blog/violin-plot-examples/
+- Raincloud plot
+    - url: https://www.marsja.se/python-data-visualization-techniques-you-should-learn-seaborn/
+    - `import ptitprince as pt` `pt.RainCloud(x = 'Species', y = 'Sepal.Length', data = df) `
+    - `pointplot = True`
+    
+## plotly
+- violin: https://plotly.com/python/violin/
+    - Ridgeline
 ## output
 写paper的话需要输出svg文件，如何进行输出呢？
 ```
