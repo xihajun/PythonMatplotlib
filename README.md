@@ -84,3 +84,6 @@ if self.outdir != False:
     # bbox_inches='tight'防止输出不全
     fig.savefig(savefilename+".svg", format="svg", bbox_inches='tight')
 ```
+
+# R
+https://helenajambor.wordpress.com/2018/08/28/pick-n-mix-plots/
