@@ -66,6 +66,7 @@ plt.setp(ax2, xlim =ax.get_xlim(), ylim=ax.get_ylim())
     - url: https://www.marsja.se/python-data-visualization-techniques-you-should-learn-seaborn/
     - `import ptitprince as pt` `pt.RainCloud(x = 'Species', y = 'Sepal.Length', data = df) `
     - `pointplot = True`
+    - Good example: https://wellcomeopenresearch.org/articles/4-63/v1
     
 ## plotly
 - violin: https://plotly.com/python/violin/
