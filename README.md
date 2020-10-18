@@ -1,5 +1,7 @@
 # Python Visualisation
 How to use python to draw: `matplotlib`, `sns`, `plotly`
+
+A good overview: http://liyangbit.com/pythonvisualization/matplotlib-top-50-visualizations/
 ## subplot
 The most important and widely used feature should be subplot. \
 需要掌握的有 
