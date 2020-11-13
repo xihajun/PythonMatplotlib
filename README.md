@@ -51,7 +51,8 @@ ax2.hist(x,y)
 plt.setp(ax2, xlim =ax.get_xlim(), ylim=ax.get_ylim())
 
 ```
-
+好玩：
+https://matplotlib.org/3.1.1/gallery/pie_and_polar_charts/bar_of_pie.html#sphx-glr-gallery-pie-and-polar-charts-bar-of-pie-py
 ## circos 和弦图
 参考：https://zhuanlan.zhihu.com/p/56744904
 ## 打断坐标
